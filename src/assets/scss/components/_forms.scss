@@ -1,0 +1,425 @@
+fieldset{
+    border: none;
+    margin: 0;
+}
+.styled-input{
+    height: 37px;
+    line-height: 17px;
+    border-radius: 19px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    outline: none;
+    color: #141E30;
+    padding: 10px 16px;
+    background-color: rgb(247, 247, 247);
+    @extend .transition;
+    &:focus{
+        border-color: #F96332;
+    }
+    &[type='number']{
+        padding-right: 5px;
+    }
+}
+
+.styled-radio{
+    display: block;
+    padding-left: 25px;
+    position: relative;
+    min-height: 19px;
+    cursor: pointer;
+   
+
+    .radiobtn{
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 19px;
+        height: 19px;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        border-radius: 100%;
+        &:after{
+            content: "";
+            display: block;
+            width: 7px;
+            height: 7px;
+            background: #141E30;
+            border-radius: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            opacity: 0;
+            @extend .transition;
+        }
+    }
+    input{
+        position: absolute;
+        opacity: 0;
+        pointer-events: none;
+        &:checked ~ .radiobtn:after{
+            opacity: 1;
+        }
+    }
+}
+.styled-checkbox{
+    padding-left: 28px;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    min-height: 18px;
+    line-height: 19px;
+    &--without-label{
+        padding-left: 18px;
+    }
+    .checkmark{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 18px;
+        width: 18px;
+        background: transparent;
+        border: 1px solid #D1D1D1;
+        border-radius: 3px;
+        background: white;
+        &:after {
+            content: "";
+            position: absolute;
+            display: none;
+            left: 5px;
+            top: 2px;
+            width: 5px;
+            height: 8px;
+            border: solid #141E30;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+        }
+    }
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        pointer-events: none;
+        &:checked ~ .checkmark {
+  
+        }
+        &:checked ~ .checkmark:after {
+            display: block;
+        }
+
+
+    }
+}
+.styled-form{
+    hr{
+        border: none;
+    border-top: 1px solid #bfc2c7;
+    margin: 0 0 20px;
+    }
+    &__row{
+        display: flex;
+        margin-bottom: 20px;
+    }
+    label{
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 18px;
+        color: #141E30;
+      
+        
+    }
+    .error-field{
+        position: absolute;
+        top: 100%;
+        color: #e82b2b;
+        padding-top: 3px;
+    }
+    .label{
+        height: 37px;
+        align-items: center;
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 10px;
+    }
+    .left-label{
+        width: 130px;
+        min-width: 130px;
+        text-align: right;
+    }
+    .three-column-row{
+        &__1{
+            min-width: 10.5%;
+        }
+        &__2{
+            min-width: 79%;
+        }
+        &__3{
+            min-width: 54%;
+        }
+    }
+    .two-column-row{
+        display: flex;
+        width: 50%;
+        min-width: 50%;
+        .control{
+            display: block;
+        }
+    }
+    .control{
+        width: 100%;
+        display: flex;
+        position: relative;
+        >*{
+            width: 100%;
+        }
+        .styled-input{
+            display: block;
+            width: 100%;
+        }
+        .label{
+            padding-left: 20px;
+        }
+    }
+    .styled-radio:not(:last-child){
+        margin-bottom: 12px;
+    }
+}
+.btn{
+    display: inline-block;
+    height: 37px;
+    line-height: 37px;
+    text-align: center;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 0;
+    padding: 0 22px;
+    outline: none;
+    border: none;
+    color: white;
+    font-weight: 300;
+    &--orange{
+        background: $orange;
+        color: white !important;
+    }
+    transition: all .3s ease 0s;
+    &:hover{
+        opacity: 0.8;
+    }
+}
+.ng-select{
+    width: 100%;
+    
+    &.ng-select-opened.ng-select-bottom>.ng-select-container,
+    &.ng-select-focused:not(.ng-selected-opened)>.ng-select-container,
+    .ng-select-container{
+        display: flex !important;
+        @extend .styled-input;
+        box-shadow: none;
+        .ng-value-container{
+            padding-left: 0;
+        }
+    }
+    .ng-dropdown-panel{
+        &.ng-select-bottom{
+            margin-top: 0;
+            border: 1px solid rgba(0, 0, 0, 0.15);
+        }
+        .ng-dropdown-panel-items{
+            .ng-option{
+                padding: 8px 16px;
+                color: #141E30;
+                &.ng-option-marked,
+                &.ng-option-selected{
+                    background-color: $orange;
+                    color: white
+                }
+            }
+        }
+    }
+}
+.analog-list{
+    display: flex;
+    background: #888888;
+    width: 100%;
+    border-radius: 37px;
+    overflow: hidden;
+    div{
+        cursor: pointer;
+        @extend .transition;
+        height: 37px;
+        width: 100%;
+        line-height: 37px;
+        color: white;
+        font-weight: 300;
+        text-align: center;
+        padding: 0 10px;
+        white-space: nowrap;
+        &.active,&:hover{
+            background: #b9b9b9;
+        }
+    }
+   
+}
+.Floor-btn{
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    color: #508a54;
+    width: auto !important;
+    bottom: 0;
+    display: inline-flex;
+    align-items: center;
+    span{
+        margin-left: 10px;
+        display: block;
+        width: 16px;
+        height: 16px;
+        border-radius: 100%;
+        border: 2px solid #508a54;
+        position: relative;
+        &:after,&:before{
+            content: "";
+            display: block;
+            width: 8px;
+            height: 2px;
+            background: #508a54;
+            position: absolute;
+            left: 50%;
+            margin-left: -4px;
+            top: 5px;
+        }
+        &:after{
+            transform: rotate(-90deg)
+        }
+    }
+    &--remove{
+        color: #ff4f4f;
+        span{
+            border-color:#ff4f4f;
+            &:before{
+                background: #ff4f4f;
+            }
+            &:after{
+                display: none;
+            }
+        }
+    }
+}
+.pagination{
+    list-style-type: none;
+    display: flex;
+    .page-item{
+        display: inline-block;
+        margin: 0 5px;
+        @extend .transition;
+        background: #f1f1f1;
+        padding: 5px 10px;
+        .page-link {
+          color: #141E30;
+        }
+        &:not(.disabled):hover .page-link,&.active .page-link {
+          color: white;
+        }
+        &:not(.disabled):hover,&.active {
+            cursor: pointer;
+            background: #141E30;
+            color: white;
+        }
+    }
+}
+mfpaginator {
+    display: flex;
+    justify-content: space-between
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    padding-left: 37px;
+    padding-top: 2px;
+    cursor: pointer;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {display:none;}
+  
+  /* The slider */
+  .slider {
+    width: 30px;
+    height: 19px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    left: 1px;
+    bottom: 1px;
+    background-color: white;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: $orange;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px $orange;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(11px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+body{
+    .ng5-slider{
+        .ng5-slider-bar{
+            background: #888888;
+        }
+        .ng5-slider-span{
+            font-size: 10px;
+        }
+        .ng5-slider-model-value{
+            font-size: 14px;
+        }
+        .ng5-slider-bubble.ng5-slider-limit{
+            bottom: 5px;
+        }
+        .ng5-slider-pointer{
+            outline: none;
+            width: 20px;
+            height: 20px;
+            top: -8px;
+            background-color: $orange;
+            &:after{
+                content: '';
+                width: 8px;
+                height: 8px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                border-radius: 4px;
+                background: #fff !important;
+                transform: translate(-50%,-50%);
+            }
+        }
+    }
+     
+}

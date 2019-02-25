@@ -1,0 +1,37 @@
+<template>
+    <header>
+        <div class="container"></div>
+    </header>
+</template>
+
+<script>
+export default {
+
+}
+</script>
+
+<style lang="scss">
+header {
+    height: 0px;
+    .container {
+        min-height: 136px;
+        background: rgb(11, 36, 67);
+        background: -moz-linear-gradient(
+            left,
+            rgba(11, 36, 67, 1) 0%,
+            rgba(43, 85, 135, 1) 100%
+        );
+        background: -webkit-linear-gradient(
+            left,
+            rgba(11, 36, 67, 1) 0%,
+            rgba(43, 85, 135, 1) 100%
+        );
+        background: linear-gradient(
+            to right,
+            rgba(11, 36, 67, 1) 0%,
+            rgba(43, 85, 135, 1) 100%
+        );
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0b2443', endColorstr='#2b5587',GradientType=1 );
+    }
+}
+</style>

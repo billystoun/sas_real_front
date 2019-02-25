@@ -1,0 +1,78 @@
+@import "./modilfers";
+@import "./var";
+@import "./forms";
+
+.login-page{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	right: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	.login-form{
+		width: 478px;
+		height: auto;
+		text-align: center;
+		&__title{
+			font-size: 1.714em;
+			line-height: 1.45em;
+			margin: 15px 0 17px;
+		}
+		&__title-2{
+			font-weight: bold;
+			text-align: center;
+			font-size: 19px;
+			margin-bottom: 20px;
+		}
+		&__text{
+			font-size: 18px;
+			line-height: 23px;
+			margin: 10px 0 20px;
+		}
+		&__img{
+			img{
+				display: block;
+				display: inline-block;
+				margin-bottom: 10px;
+				overflow: hidden;
+				text-align: center;
+				vertical-align: middle;
+				max-width: 250px;
+				box-shadow: 0 1px 15px 1px rgba(39,39,39,.1);
+			}
+		}
+		&__row{
+			display: flex;
+			align-items: center;
+			margin-bottom: 17px;
+			position: relative;
+			label{
+				text-align: center;
+				display: block;
+				height: auto;
+				min-width: 234px;
+				font-size: 18px;
+				text-align: center;
+				display: block;
+				height: auto;
+				&.error-field{
+					font-size: 12px;
+    			text-align: left;
+    			padding-top: 0;
+				}
+			}
+		}
+		&__btn-container{
+			position: relative;
+			padding-top: 30px;
+			margin-top: 8px;
+			.error-field{
+				top: 0;
+				width: 100%;
+				left: 0;
+			}
+		}
+	}
+}

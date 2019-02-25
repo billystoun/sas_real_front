@@ -1,0 +1,67 @@
+{
+	"urlautocomplete": "https://realestate.eliz.site/get_data_from_zhkh_by_address",
+	"fulladdress": {
+		"label": "Адрес"
+	},
+	"totalarea": {
+		"label": "Общая площадь"
+	},
+	"livingspacearea": {
+		"label": "Жилая площадь"
+	},
+	"kitchenarea": {
+		"label": "Площадь кухни"
+	},
+	"cadnumber": {
+		"label": "Кадастровый номер",
+		"default": "ХХ:ХХ:ХХХХХХХ:ХХ..."
+	},
+	"countOfAnalogs": {
+		"label": "Количеств аналогов"
+	},
+	"buildingtype": {
+		"label": "Тип здания",
+		"valueslist": [
+			"блочный",
+			"кирпич",
+			"монолит",
+			"панель",
+			"смешанный тип",
+			"сталинский",
+			"деревянный"
+		]
+	},
+	"buildingperiod": {
+		"label": "Год постройки"
+	},
+	"roomsnum": {
+		"label": "Количество комнат"
+	},
+	"storey": {
+		"label": "Этаж"
+	},
+	"storeysnum": {
+		"label": "Количество этажей в доме"
+	},
+	"repairraw": {
+		"label": "Состояние отделки",
+		"valueslist": [
+			"Без ремонта",
+			"Требуется косметический",
+			"Стандарт",
+			"Дизайнерский"
+		]
+	},
+	"windowview": {
+		"label": "Вид из окна",
+		"valueslist": [
+			"Панорама",
+			"Во двор",
+			"На улицу",
+			"На улицу и во двор"
+		]
+	},
+	"balconiesnum": {
+		"label": "Количество балконов"
+	}
+}
